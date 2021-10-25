@@ -1,6 +1,8 @@
+const button = document.getElementById('getResults')
+button.addEventListener('click', function() {
 // Use the fetch api to display some simple user data!
 
-url = 'https://reqres.in/api/users.json'
+url = 'https://reqres.in/api/users'
 
 
 // the function that will return the final string to be added to our HTML
@@ -18,3 +20,4 @@ fetch()
     .then()
     // console.log an error message in case something goes wrong
     .catch()
+})
