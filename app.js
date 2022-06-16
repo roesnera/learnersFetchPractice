@@ -6,12 +6,20 @@
 
 function makeCall() {
   // Use the fetch api to display some simple user data to the console!
-  url = "https://reqres.in/api/users";  
+  url = "https://reqres.in/api/users";
 
   
-  fetch() // call the fetch api with the correct input argument!
-    .then() // convert the returned data into a json using the object's built-in methods.
-    .then() // use the resulting json to display some of our user information in the console.
+  fetch(url ) // call the fetch api with the correct input argument!
+    .then(function(response) {
+      return response.json();
+    }
+    ) // convert the returned data into a json using the object's built-in methods.
+    .then(function(response) {
+      console.log(response.data[0]);
+    }
+    ) // use the resulting json to display some of our user information in the console.
     .catch(); // console.log an error message in case something goes wrong.
 
 };
+
+//makeCall();
